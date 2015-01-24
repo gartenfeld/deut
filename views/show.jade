@@ -1,0 +1,13 @@
+doctype html
+html(ng-app='myApp')
+    head
+        title= "Hallo!"
+        link(rel='stylesheet', href='css/panels.css')
+        script(src='lib/angular/angular.min.js')
+        script(src='lib/jquery-2.1.1.min.js')
+        script(src='js/search.js')
+    body
+        div.container(ng-controller="myController", ng-init="init('"+wort+"',1)")
+            div.quotation(ng-repeat="quote in quotes") 
+                span(ng-repeat="item in quote.manifest", class='{{item.band||"n"}}')
+                    a(href="" ng-click="init(item.token, item.results)") {{item.token}}

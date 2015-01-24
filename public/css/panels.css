@@ -1,0 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+.quotation {
+    font-size: 2em;
+    font-family: 'Droid Serif';
+    line-height: 1.5em;
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 2em;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}

@@ -1,64 +1,74 @@
 import sys
-import re
-import os
-import collections
-import codecs # UniCode support
-from pymongo import Connection # For DB Connection
-from pymongo.errors import ConnectionFailure # For catching exeptions
-import nltk
+import codecs
+from pymongo import Connection
 
-DIR = os.path.abspath(os.path.dirname(__file__))
 
-def copy_morphy():
-  
-  # MongoDB connection
-  try:
-    db_conn = Connection(host="localhost", port=27017) # Here we specified the default parameters explicitly
-    print "Connected to MongoDB successfully!"
-  except ConnectionFailure, e:
-    sys.stderr.write("Could not connect to MongoDB: %s" % e)
+def connect_to_db(database, collection):
 
-  # Grab a database
-  db = db_conn["lab"]
+    try:
+        db_connection = Connection(host="localhost", port=27017)
+        print("Connected to MongoDB successfully!")
+        db = db_connection[database]
+        handle = db[collection]
+    except:
+        print("Could not connect to MongoDB.")
+    return handle
 
-  # Open file
-  f = codecs.open(os.path.join(DIR, "morphy.txt"), 'r', encoding='utf-8') # Codecs instead regular 'open' to handle UTF-8
 
-  # Read each line
-  for line in f:
-    
-    try: # For exception catching
-      a = line.rstrip().split('\t') # In this case, it's space-separated!
+def unpack_line(l):
 
-      # If a column is missing...
-      if len(a) is not 2:
+    a = l.rstrip().split('\t')
+
+    # If a column is missing...
+    if len(a) is not 2:
         raise IndexError
-      
-      raw_form = a[0]
-      immediate = a[1]
 
-      if not immediate.isalpha() and '-' not in immediate:
+    raw_form = a[0]
+    immediate = a[1]
+
+    # To deal with odd entries, e.g. '?'
+    if not immediate.isalpha() and '-' not in immediate:
         immediate = raw_form
 
-
-      # Create dictionary object
-      record = {
+    # Create dictionary object
+    record = {
         "vollform": raw_form,
         "immediate": immediate
-      }
-      
-      # Insert document into DB
-      db.morphy.insert(record, safe=True) # Collections ('morphy' here) are lazily created
-      
-    # Exception handler
-    except IndexError:
-      sys.stderr.write( "Something wrong with this line: " + line + '\n')
-      continue
-    
-  # Close file
-  f.close()
+        }
 
-  print 'Hooray!'
-  
+    # Insert document into DB
+    collection.insert(record, safe=True)
+
+
+def process_file(data_file):
+
+    f = codecs.open(data_file, 'r', encoding='utf-8')
+
+    for line in f:
+
+        try:
+            unpack_line(line)
+
+        except:
+            print("Error:\t" + line + '\n')
+            print(sys.exc_info())
+            continue
+
+    f.close()
+
+    return
+
+
 if __name__ == "__main__":
-  copy_morphy()
+
+    source_file = "Data/morphy.txt"
+    db_name = "deutsch"
+    collection_name = "morphy"
+
+    print("Connecting to database...")
+    collection = connect_to_db(db_name, collection_name)
+
+    print("Processing file...")
+    process_file(source_file)
+
+    print("Valmis!")

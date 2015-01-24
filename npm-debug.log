@@ -1,0 +1,258 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'mongodb', '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'mongodb', null ]
+6 verbose cache add name=undefined spec="mongodb" args=["mongodb",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'mongodb',
+7 verbose parsed url   path: 'mongodb',
+7 verbose parsed url   href: 'mongodb' }
+8 silly lockFile 7f1c982e-mongodb mongodb
+9 verbose lock mongodb /Users/dave/.npm/7f1c982e-mongodb.lock
+10 silly lockFile 7f1c982e-mongodb mongodb
+11 silly lockFile 7f1c982e-mongodb mongodb
+12 verbose addNamed [ 'mongodb', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 886df635-mongodb mongodb@
+15 verbose lock mongodb@ /Users/dave/.npm/886df635-mongodb.lock
+16 silly addNameRange { name: 'mongodb', range: '*', hasData: false }
+17 verbose request where is /mongodb
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id d5b7e69af51f2b6c
+20 verbose url raw /mongodb
+21 verbose url resolving [ 'https://registry.npmjs.org/', './mongodb' ]
+22 verbose url resolved https://registry.npmjs.org/mongodb
+23 verbose request where is https://registry.npmjs.org/mongodb
+24 info trying registry request attempt 1 at 09:25:32
+25 verbose etag "8MZTPRJUA93I74MCG3KOPBXHL"
+26 http GET https://registry.npmjs.org/mongodb
+27 http 200 https://registry.npmjs.org/mongodb
+28 silly registry.get cb [ 200,
+28 silly registry.get   { date: 'Fri, 23 Jan 2015 22:25:32 GMT',
+28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+28 silly registry.get     etag: '"C3T6MIJF4IFL1Z6CV4OO75TJZ"',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     'content-length': '415761',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-syd1622-SYD',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '1',
+28 silly registry.get     'x-timer': 'S1422051932.357558,VS0,VE184',
+28 silly registry.get     vary: 'Accept',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 silly addNameRange number 2 { name: 'mongodb', range: '*', hasData: true }
+30 silly addNameRange versions [ 'mongodb',
+30 silly addNameRange   [ '0.9.4',
+30 silly addNameRange     '0.9.4-4',
+30 silly addNameRange     '0.9.3',
+30 silly addNameRange     '0.9.1',
+30 silly addNameRange     '0.9.2',
+30 silly addNameRange     '0.9.6-7',
+30 silly addNameRange     '0.9.6-8',
+30 silly addNameRange     '0.9.6-9',
+30 silly addNameRange     '0.9.6-10',
+30 silly addNameRange     '0.9.6-11',
+30 silly addNameRange     '0.9.6-12',
+30 silly addNameRange     '0.9.6-13',
+30 silly addNameRange     '0.9.6-14',
+30 silly addNameRange     '0.9.6-15',
+30 silly addNameRange     '0.9.6-16',
+30 silly addNameRange     '0.9.6-17',
+30 silly addNameRange     '0.9.6-18',
+30 silly addNameRange     '0.9.6-19',
+30 silly addNameRange     '0.9.6-20',
+30 silly addNameRange     '0.9.6-21',
+30 silly addNameRange     '0.9.6-22',
+30 silly addNameRange     '0.9.6-23',
+30 silly addNameRange     '0.9.7',
+30 silly addNameRange     '0.9.7-0',
+30 silly addNameRange     '0.9.7-1',
+30 silly addNameRange     '0.9.7-1.1',
+30 silly addNameRange     '0.9.7-1.2',
+30 silly addNameRange     '0.9.7-1.3',
+30 silly addNameRange     '0.9.7-1.4',
+30 silly addNameRange     '0.9.7-2',
+30 silly addNameRange     '0.9.7-2-1',
+30 silly addNameRange     '0.9.7-2-2',
+30 silly addNameRange     '0.9.7-2-3',
+30 silly addNameRange     '0.9.7-2-4',
+30 silly addNameRange     '0.9.7-2-5',
+30 silly addNameRange     '0.9.7-3',
+30 silly addNameRange     '0.9.7-3-1',
+30 silly addNameRange     '0.9.7-3-2',
+30 silly addNameRange     '0.9.7-3-3',
+30 silly addNameRange     '0.9.7-3-4',
+30 silly addNameRange     '0.9.7-3-5',
+30 silly addNameRange     '0.9.8',
+30 silly addNameRange     '0.9.8-1',
+30 silly addNameRange     '0.9.8-2',
+30 silly addNameRange     '0.9.8-3',
+30 silly addNameRange     '0.9.8-4',
+30 silly addNameRange     '0.9.8-5',
+30 silly addNameRange     '0.9.8-6',
+30 silly addNameRange     '0.9.8-7',
+30 silly addNameRange     '0.9.9',
+30 silly addNameRange     '0.9.9-1',
+30 silly addNameRange     '0.9.9-2',
+30 silly addNameRange     '0.9.9-3',
+30 silly addNameRange     '0.9.9-4',
+30 silly addNameRange     '0.9.9-5',
+30 silly addNameRange     '0.9.9-6',
+30 silly addNameRange     '0.9.9-7',
+30 silly addNameRange     '0.9.9-8',
+30 silly addNameRange     '1.0.0',
+30 silly addNameRange     '1.0.1',
+30 silly addNameRange     '1.0.2',
+30 silly addNameRange     '1.1.0-beta',
+30 silly addNameRange     '1.1.0',
+30 silly addNameRange     '1.1.1',
+30 silly addNameRange     '1.1.2',
+30 silly addNameRange     '1.1.3',
+30 silly addNameRange     '1.1.4',
+30 silly addNameRange     '1.1.5',
+30 silly addNameRange     '1.1.6',
+30 silly addNameRange     '1.1.7',
+30 silly addNameRange     '1.1.8',
+30 silly addNameRange     '1.1.9',
+30 silly addNameRange     '1.1.10',
+30 silly addNameRange     '1.1.11',
+30 silly addNameRange     '1.2.0',
+30 silly addNameRange     '1.2.1',
+30 silly addNameRange     '1.2.2',
+30 silly addNameRange     '1.2.3',
+30 silly addNameRange     '1.2.4',
+30 silly addNameRange     '1.2.5',
+30 silly addNameRange     '1.2.6',
+30 silly addNameRange     '1.2.7',
+30 silly addNameRange     '1.2.8',
+30 silly addNameRange     '1.2.9',
+30 silly addNameRange     '1.2.10',
+30 silly addNameRange     '1.2.11',
+30 silly addNameRange     '1.2.12',
+30 silly addNameRange     '1.2.13',
+30 silly addNameRange     '1.2.14',
+30 silly addNameRange     '1.3.0',
+30 silly addNameRange     '1.3.1',
+30 silly addNameRange     '1.3.2',
+30 silly addNameRange     '1.3.3',
+30 silly addNameRange     '1.3.4',
+30 silly addNameRange     '1.3.5',
+30 silly addNameRange     '1.3.6',
+30 silly addNameRange     '1.3.7',
+30 silly addNameRange     '1.3.8',
+30 silly addNameRange     '1.3.9',
+30 silly addNameRange     '1.3.10',
+30 silly addNameRange     '1.3.11',
+30 silly addNameRange     '1.3.12',
+30 silly addNameRange     '1.3.14',
+30 silly addNameRange     '1.3.15',
+30 silly addNameRange     '1.3.17',
+30 silly addNameRange     '1.3.18',
+30 silly addNameRange     '1.3.19',
+30 silly addNameRange     '1.4.0-rc2',
+30 silly addNameRange     '1.3.20',
+30 silly addNameRange     '1.4.0-rc3',
+30 silly addNameRange     '1.3.21',
+30 silly addNameRange     '1.3.22',
+30 silly addNameRange     '1.3.23',
+30 silly addNameRange     '1.4.0-rc4',
+30 silly addNameRange     '1.4.0-rc5',
+30 silly addNameRange     '1.4.0-rc6',
+30 silly addNameRange     '1.4.0-rc7',
+30 silly addNameRange     '1.4.0-rc8',
+30 silly addNameRange     '1.4.0-rc9',
+30 silly addNameRange     '1.4.0-rc10',
+30 silly addNameRange     '1.4.0',
+30 silly addNameRange     '1.4.1',
+30 silly addNameRange     '1.4.2',
+30 silly addNameRange     '1.4.3',
+30 silly addNameRange     '1.4.4',
+30 silly addNameRange     '1.4.5',
+30 silly addNameRange     '1.4.6',
+30 silly addNameRange     '1.4.7',
+30 silly addNameRange     '1.4.8',
+30 silly addNameRange     '1.4.9',
+30 silly addNameRange     '1.4.10',
+30 silly addNameRange     '2.0.0-alpha1',
+30 silly addNameRange     '1.4.11',
+30 silly addNameRange     '1.4.12',
+30 silly addNameRange     '1.4.14',
+30 silly addNameRange     '1.4.15',
+30 silly addNameRange     '1.4.16',
+30 silly addNameRange     '1.4.17',
+30 silly addNameRange     '2.0.0-alpha2',
+30 silly addNameRange     '1.4.18',
+30 silly addNameRange     '2.0.0',
+30 silly addNameRange     '2.0.1',
+30 silly addNameRange     '2.0.2',
+30 silly addNameRange     '1.4.19',
+30 silly addNameRange     '2.0.3',
+30 silly addNameRange     '2.0.4',
+30 silly addNameRange     '2.0.5',
+30 silly addNameRange     '2.0.6',
+30 silly addNameRange     '1.4.20',
+30 silly addNameRange     '1.4.22',
+30 silly addNameRange     '2.0.7',
+30 silly addNameRange     '2.0.8',
+30 silly addNameRange     '2.0.9',
+30 silly addNameRange     '1.4.23',
+30 silly addNameRange     '2.0.10',
+30 silly addNameRange     '1.4.24',
+30 silly addNameRange     '2.0.11',
+30 silly addNameRange     '1.4.25',
+30 silly addNameRange     '2.0.12',
+30 silly addNameRange     '1.4.26',
+30 silly addNameRange     '1.4.27',
+30 silly addNameRange     '1.4.28',
+30 silly addNameRange     '2.0.13',
+30 silly addNameRange     '2.0.14',
+30 silly addNameRange     '1.4.29' ] ]
+31 verbose addNamed [ 'mongodb', '1.4.29' ]
+32 verbose addNamed [ '1.4.29', '1.4.29' ]
+33 silly lockFile 2563398f-mongodb-1-4-29 mongodb@1.4.29
+34 verbose lock mongodb@1.4.29 /Users/dave/.npm/2563398f-mongodb-1-4-29.lock
+35 silly lockFile 0ceb3f57-s-org-mongodb-mongodb-1-4-29-tgz https://registry.npmjs.org/mongodb/-/mongodb-1.4.29.tgz
+36 verbose lock https://registry.npmjs.org/mongodb/-/mongodb-1.4.29.tgz /Users/dave/.npm/0ceb3f57-s-org-mongodb-mongodb-1-4-29-tgz.lock
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/mongodb/-/mongodb-1.4.29.tgz',
+37 verbose addRemoteTarball   '0f1fc8b665e39c9bef0f54d941cad54cd3e3e60e' ]
+38 info retry fetch attempt 1 at 09:25:32
+39 verbose fetch to= /var/folders/hy/1s3_4n6n11d582htfw4h50940000gn/T/npm-27018-Ssz-24Mr/registry.npmjs.org/mongodb/-/mongodb-1.4.29.tgz
+40 http GET https://registry.npmjs.org/mongodb/-/mongodb-1.4.29.tgz
+41 http 200 https://registry.npmjs.org/mongodb/-/mongodb-1.4.29.tgz
+42 silly lockFile 0ceb3f57-s-org-mongodb-mongodb-1-4-29-tgz https://registry.npmjs.org/mongodb/-/mongodb-1.4.29.tgz
+43 silly lockFile 0ceb3f57-s-org-mongodb-mongodb-1-4-29-tgz https://registry.npmjs.org/mongodb/-/mongodb-1.4.29.tgz
+44 silly lockFile 2563398f-mongodb-1-4-29 mongodb@1.4.29
+45 silly lockFile 2563398f-mongodb-1-4-29 mongodb@1.4.29
+46 silly lockFile 886df635-mongodb mongodb@
+47 silly lockFile 886df635-mongodb mongodb@
+48 error Error: EACCES, mkdir '/Users/dave/.npm/mongodb/1.4.29'
+48 error  { [Error: EACCES, mkdir '/Users/dave/.npm/mongodb/1.4.29']
+48 error   errno: 3,
+48 error   code: 'EACCES',
+48 error   path: '/Users/dave/.npm/mongodb/1.4.29',
+48 error   parent: 'deut' }
+49 error Please try running this command again as root/Administrator.
+50 error System Darwin 14.0.0
+51 error command "node" "/usr/local/bin/npm" "install" "mongodb" "--save"
+52 error cwd /Users/dave/Dev/deut
+53 error node -v v0.10.32
+54 error npm -v 1.4.28
+55 error path /Users/dave/.npm/mongodb/1.4.29
+56 error code EACCES
+57 error errno 3
+58 error stack Error: EACCES, mkdir '/Users/dave/.npm/mongodb/1.4.29'
+59 verbose exit [ 3, true ]
