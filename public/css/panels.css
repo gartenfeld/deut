@@ -11,6 +11,53 @@ body {
     margin-right: 10%
 }
 
+.bs {
+    color: #999;
+    background-color: #fff;
+}
+
+.bn {
+    color: #555;
+}
+
+.bs,.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9,.b10,.b11,.b12,.b13,.b14,.b15,.b16,.b17,.b18,.b19,.b20,.b21,.b22,.b23,.b24,.b25,.b26,.b27,.b28,.b29 {
+    border-radius: 3px;
+    padding: 0px 2px 0px 2px;
+}
+
+
+.bu {
+    color: #444;
+}
+
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8 {
+    background-color: #E9E9E9;
+}
+
+.b9,.b10 {
+    background-color: #D2FFD2;
+}
+
+.b11,.b12 {
+    background-color: #96FF96;
+}
+
+.b13,.b14 {
+    background-color: #D2FFD2;
+}
+
+.b15,.b16,.b17,.b18 {
+    background-color: #D7D7D7;
+}
+
+.b19,.b20,.b21,.b22 {
+    background-color: #FFDCDC;
+}
+
+.b23,.b24,.b25,.b26,.b27,.b28,.b29 {
+    background-color: #FFB4B4;
+}
+
 .quotation {
     font-size: 2em;
     font-family: 'Droid Serif';
@@ -21,6 +68,15 @@ body {
 }
 
 a {
-  color: #000;
-  text-decoration: none;
+    color: #000;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none !important;
+}
+
+.tooltip {
+    font-size: 20px;
 }

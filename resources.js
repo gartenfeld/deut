@@ -11,11 +11,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080,
     server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
  
-//var dbUser = process.env.SUOMI_USERNAME,
-//    dbPass = process.env.SUOMI_PASSWORD;
+var dbUser = process.env.DEUT_USERNAME,
+    dbPass = process.env.DEUT_PASSWORD;
 
-var dbHost = "localhost",
-    dbPort = 27017;
+var dbHost = dbUser + ':' + dbPass + "@ds053448.mongolab.com",
+    dbPort = 53448;
 
 var uri = 'mongodb://' + dbHost + ':' + dbPort + '/deutsch';
 
@@ -30,13 +30,12 @@ function getHeadword (searchString, callback) {
 
             var cursor = db.collection("quotes").find(
                 query,  
-                { 'score': { '$meta': 'textScore' } },
-                { '$sort': { '$meta': 'textScore' } }
-                ).limit(3);
+                { sort: {'richness': -1} }
+                ).limit(5);
 
             cursor.toArray(
                 function(error, docs){
-                    if (docs.length === 0) { 
+                    if (!docs) { 
                         callback(false); 
                     } else { 
                         callback(docs); 

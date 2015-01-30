@@ -2,12 +2,29 @@ doctype html
 html(ng-app='myApp')
     head
         title= "Hallo!"
+        link(rel='stylesheet', href='css/bootstrap.min.css')
         link(rel='stylesheet', href='css/panels.css')
-        script(src='lib/angular/angular.min.js')
         script(src='lib/jquery-2.1.1.min.js')
+        script(src='lib/angular/angular.min.js')
+        script(src='js/bootstrap.min.js')
         script(src='js/search.js')
+
     body
         div.container(ng-controller="myController", ng-init="init('"+wort+"',1)")
             div.quotation(ng-repeat="quote in quotes") 
-                span(ng-repeat="item in quote.manifest", class='{{item.band||"n"}}')
-                    a(href="" ng-click="init(item.token, item.results)") {{item.token}}
+                span(ng-repeat="item in quote.manifest")
+                    a(class='b{{item.band}}', href="", ng-click="init(item.token, 1)", data-toggle='tooltip', title='{{item.gloss}}' ) {{item.token}}
+        script(type='text/javascript').
+            var targetNodes = $('.container');
+            var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+            var myObserver = new MutationObserver (mutationHandler);
+            var obsConfig = { childList: true, characterData: false, attributes: false, subtree: false };
+            targetNodes.each( function(){
+                myObserver.observe(this, obsConfig);
+            } );
+            function mutationHandler () {
+                $('[data-toggle="tooltip"]').tooltip();
+            }
+
+
+                
