@@ -7,7 +7,7 @@ angular.module('myApp', [])
   				if (count && count > 0) {
 	    			$scope.query = value;
 	    			if ($scope.query !== "") {
-				        $http.get('http://127.0.0.1:8080/json/' + $scope.query)
+				        $http.get('http://deut-rosson.rhcloud.com/json/' + $scope.query)
 				        .success(function(data) {
 							$scope.quotes = data;
 				  		});
